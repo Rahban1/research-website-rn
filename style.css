@@ -1,8 +1,69 @@
+/* General Reset */
+:root {
+    --dark-blue: #001427;
+    --green: #708d81;
+    --yellow: #f4d58d;
+    --red: #bf0603;
+    --dark-red: #8d0801;
+}
 
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
 
-.nav-links{
+/* Navbar */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding:1.4rem 2rem;
+    background-color: var(--red);
+    color: white;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--yellow);
+}
+
+.nav-links a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: var(--yellow);
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
 }
