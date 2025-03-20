@@ -1,12 +1,10 @@
-/* General Reset */
 :root {
-    --dark-blue: #001427;
-    --green: #708d81;
-    --yellow: #f4d58d;
-    --red: #bf0603;
-    --dark-red: #8d0801;
-}
-
+    --orange: #FF6700;
+    --light-gray: #EBEBEB;
+    --silver: #C0C0C0;
+    --blue: #3A6EA5;
+    --dark-blue: #004E98;
+  }
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -17,8 +15,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:1.4rem 2rem;
-    background-color: var(--red);
+    padding:1.7rem 2rem;
+    background-color: var(--dark-blue);
     color: white;
 }
 
@@ -42,14 +40,14 @@ body {
 .nav-links a {
     text-decoration: none;
     color: white;
-    font-size: 0.85rem;
+    font-size: .9rem;
     font-weight: bold;
-    padding: 0.5rem 0;
+    padding: 0.3rem 0;
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: var(--yellow);
+    color: var(--orange);
 }
 
 .nav-links a::after {
@@ -57,7 +55,7 @@ body {
     display: block;
     height: 2px;
     width: 0;
-    background: var(--yellow);
+    background: var(--orange);
     transition: width 0.3s ease;
     position: absolute;
     bottom: 0;
