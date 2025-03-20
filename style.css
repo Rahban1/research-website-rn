@@ -36,10 +36,11 @@ body {
     transform: translate(-50%, -50%);
     z-index: 5;
     max-width: 40%;
-    background-color: rgba(255, 255, 255, 0.85); /* Solid white background */
-    padding: 6%;
+    background-color: rgba(255, 255, 255, 0.95); /* Increased opacity for better readability */
+    padding-block: 6%;
+    padding-inline: 7%;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow for better visibility */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Increased shadow for better visibility */
 }
 
 .img-div {
@@ -104,7 +105,7 @@ body {
 /* Updated heading styles */
 .heading {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 3.1rem;
     font-weight: 700;
     color: var(--heading-color);
     margin-bottom: 1.2rem;
@@ -116,7 +117,7 @@ body {
 
 .date {
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 600;
     color: var(--subheading-color);
     margin-bottom: 1.5rem;
@@ -153,7 +154,7 @@ body {
 
 .clg-name {
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 600;
     color: var(--heading-color);
     margin-top: 1rem;
@@ -220,4 +221,170 @@ body {
 
 .nav-links a:hover::after {
     width: 100%;
+}
+
+/* Hamburger menu for mobile */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1200px) {
+    .hero-content {
+        max-width: 60%;
+    }
+    
+    .heading {
+        font-size: 2.8rem;
+    }
+    
+    .date {
+        font-size: 1.5rem;
+    }
+    
+    .clg-name {
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .hero-content {
+        max-width: 70%;
+        padding-block: 5%;
+        padding-inline: 6%;
+    }
+    
+    .heading {
+        font-size: 2.5rem;
+    }
+    
+    .nav-links li {
+        margin: 0 0.5rem;
+    }
+    
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 1rem 1.5rem;
+    }
+    
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--dark-blue);
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        display: none;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        margin: 0.8rem 0;
+    }
+    
+    .hero-content {
+        max-width: 90%; 
+        padding-block: 5%;
+        padding-inline: 5%;
+    }
+    
+    .heading {
+        font-size: 2.4rem; 
+        margin-bottom: 1rem;
+    }
+    
+    .date {
+        font-size: 1.5rem; 
+        margin-bottom: 1.2rem;
+    }
+    
+    .org {
+        font-size: 1.3rem; 
+        margin-bottom: 0.6rem;
+    }
+    
+    .clg-name {
+        font-size: 1.7rem; 
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .hero-content {
+        max-width: 92%; 
+        padding-block: 5%;
+        padding-inline: 5%;
+    }
+    
+    .heading {
+        font-size: 2rem; 
+        margin-bottom: 0.8rem;
+    }
+    
+    .date {
+        font-size: 1.4rem; 
+        margin-bottom: 1rem;
+    }
+    
+    .org {
+        font-size: 1.3rem; 
+        margin-bottom: 0.7rem;
+    }
+    
+    .clg-name {
+        font-size: 1.6rem; 
+    }
+    
+    .logo-div {
+        width: 85px; 
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .hero-content {
+        max-width: 95%; 
+        padding: 5%;
+    }
+    
+    .heading {
+        font-size: 1.8rem; 
+    }
+    
+    .date, .org {
+        font-size: 1.2rem; 
+    }
+    
+    .clg-name {
+        font-size: 1.5rem; 
+    }
+    
+    .logo-div {
+        width: 70px; 
+    }
 }
